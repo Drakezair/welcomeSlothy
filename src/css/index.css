@@ -1,0 +1,177 @@
+header {
+    height: 88px;
+    background: #393D45;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 90px;
+    z-index: 2;
+    box-shadow: #393d45ed 0px 2px 15px ;
+    position: relative;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffb200;
+}
+
+.contain {
+    background-image: url(../assets/ondas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 730px;
+    width: 90vw;
+    z-index: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: relative;
+    margin: 0 auto 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.slothy {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    color: #373d46;
+    line-height: 70px;
+    margin: 0;
+}
+
+.digitalMarketing {
+    font-family: 'Montserrat', cursive;
+    letter-spacing: 4px;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.description h2 {
+    font-family: 'Overpass', cursive;
+    color: #373d46;
+    font-size: 34px;
+    margin: 20px 0 0;
+}
+
+.description p {
+    font-family: 'Montserrat', cursive;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    margin: 0;
+}
+
+form {
+    min-height: 225px;
+    position: relative;
+    width: 75%;
+    border-radius: 30px;
+    background-image: url(../assets/box.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 30px auto 0;
+    display: flex;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: #1f1f1f 0px 3px 20px 0px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    width: calc(50%);
+    align-items: flex-end;
+}
+
+.right {
+    display: flex;
+    flex-direction: column; 
+    width: calc(50%);
+}
+
+input {
+    height: 45px;
+    width: 100%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-family: 'Montserrat', cursive;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
+.small {
+    width: 50%;
+}
+
+.enviar {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    bottom: -25px;
+    left: calc(50% - 40px);
+    color: #fff;
+    font-family: 'Montserrat', cursive;
+    font-weight: 900;
+    font-size: 17px;
+    background: #00abe8;
+    display: flex;
+    justify-content: center;
+    box-shadow: #1f1f1f 0px 3px 20px 0px;
+}
+
+.pie {
+    font-family: 'Overpass', cursive;
+    color: #373d46;
+    font-size: 34px;
+    margin: 20px 0 0;
+    font-weight: bolder;
+}
+
+/* SI HAY CODIGO */
+
+.gracias {
+    font-family: 'Overpass', cursive;
+    color: #373d46;
+    font-size: 34px;
+    margin: 20px 0 0;
+}
+
+.box {
+    height: 90px;
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff5e7;
+    margin: 30px auto 0;
+    box-shadow: #1f1f1f 0px 3px 20px 0px;
+}
+
+.box h2 {
+    margin: 0;
+}
+
+.piecode {
+    font-family: 'Montserrat', cursive;
+    font-size: 18px;
+    color: #000;
+    font-weight: 800;
+    margin: 30px 0 0; 
+}
