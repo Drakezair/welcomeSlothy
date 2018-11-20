@@ -56,6 +56,12 @@ class App extends Component {
             })
             this.history.push('/felicidades')
         })
+        firebase.database().ref(`usuarios/${this.state.nombres}`).set({
+            email: this.state.email,
+            celular: this.state.celular,
+            pais: this.state.pais,
+            ciudad: this.state.ciudad,
+        })
     }
 
     handleChange =(st, t) =>{
