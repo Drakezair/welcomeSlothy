@@ -1,3 +1,7 @@
+body {
+    background: #f6f6f6;
+}
+
 header {
     height: 88px;
     background: #393D45;
@@ -20,6 +24,7 @@ header a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    height: 85vh;
     min-height: 730px;
     width: 90vw;
     z-index: 0;
@@ -29,6 +34,17 @@ header a {
     margin: 0 auto 30px;
     text-align: center;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Logo {
+    animation-name: 'logomove';
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
 }
 
 .slothy {
@@ -67,7 +83,7 @@ header a {
 form {
     min-height: 225px;
     position: relative;
-    width: 75%;
+    width: 800px;
     border-radius: 30px;
     background-image: url(../assets/box.png);
     background-size: cover;
@@ -94,7 +110,7 @@ form {
 
 input {
     height: 45px;
-    width: 100%;
+    width: 325px;
     margin: 10px 0;
     border: none;
     border-radius: 10px;
@@ -174,4 +190,97 @@ input::-webkit-inner-spin-button {
     color: #000;
     font-weight: 800;
     margin: 30px 0 0; 
+}
+
+.social {
+    position: absolute;
+    left: 0;
+    top: 127px;
+    background: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    box-shadow: #0006 0px 0px 20px;
+}
+
+.divider {
+    border-top: #000 solid 1px;
+    margin: 10px 0;
+    width: 42px;
+}
+
+.social img {
+    height: 42px;
+}
+
+@media screen and (max-width: 900px){
+    header {
+        justify-content: flex-start;
+        position: fixed; 
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contain {
+        padding-top: 120px !important; 
+        height: 100%;
+        width: calc(100% - 80px);
+        padding: 40px;
+        margin: 0;
+        box-sizing: inherit;
+    }
+    
+    form {
+        width: 320px;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    input {
+        width: 280px
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+    
+    .small {
+        width:  280px
+    }
+
+    .description h2 {
+        font-size: 25px;
+    }
+
+    .social {
+        background: none;
+        box-shadow: none;
+        display: flex;
+        top:0;
+        right: 0;
+        left: unset;
+        z-index: 345;
+        position: fixed;
+    }
+
+    .social img {
+        margin: 0 5px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .pie {
+        margin-top: 50px;
+    }
+}
+
+@keyframes logomove {
+    from {
+        transform: rotateZ(15deg);
+    }
+    to {
+        transform: rotateZ(-15deg);
+    }
 }

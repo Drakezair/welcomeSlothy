@@ -9,7 +9,7 @@ class NoCode extends Component {
                 <div className='box' >
                     <h2 className='gracias' >No Hay Codigos Disponibles</h2>
                 </div>
-                <p className='piecode' >Ups, por hoy no tenemos más codigos, pero ma;ana tendrás una nueva oportunidad </p>
+                <p className='piecode' >Ups, por hoy no tenemos más codigos, pero mañana tendrás una nueva oportunidad </p>
             </div>
         )
     }
