@@ -9,7 +9,7 @@ import Form from '../component/Form';
 import Code from '../component/Code';
 import NoCode from '../component/noCode';
 
-import $ from 'jquery';
+
 
 
 class App extends Component {
@@ -44,27 +44,7 @@ class App extends Component {
         
         
     }
-    
-    hola() {
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://us19.api.mailchimp.com/3.0/lists/cce9baf4eb/members",
-            "method": "GET",
-            "headers": {
-              "Content-Type": "application/json",
-              "Authorization": "Basic YXBpa2V5OmMxYTk5YTg3Y2E5Y2RlZjIyMjU4OTg3YzE2MWU1OWMxLXVzMTk=",
-              "cache-control": "no-cache",
-              "Postman-Token": "ff1a36dd-eb92-4b66-b86f-a17f407b99c7"
-            },
-            "processData": false,
-            "data": "{\n    \"email_address\": \"urist.mcvankab@freddiesjokes.com\",\n    \"status\": \"subscribed\",\n    \"merge_fields\": {\n        \"FNAME\": \"Urist\",\n        \"LNAME\": \"McVankab\"\n    }\n}"
-          }
-          
-          $.ajax(settings).done(function (response) {
-            console.log(response);
-          });
-    }
+
     
     handleForm(e){
         e.preventDefault();
@@ -78,8 +58,8 @@ class App extends Component {
             })
             this.history.push('/felicidades')
         })
-        firebase.database().ref(`usuarios/${this.state.nombres}`).set({
-            email: this.state.email,
+        firebase.database().ref(`usuarios/${this.state.day}/${this.state.nombres}`).set({
+            nombre: `${this.state.nombres} ${this.state.apellidos}`,
             celular: this.state.celular,
             pais: this.state.pais,
             ciudad: this.state.ciudad,
